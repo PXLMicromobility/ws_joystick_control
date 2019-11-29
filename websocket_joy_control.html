@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/jszip.js"></script>
+<script type="text/javascript" src="scripts/filesave.js"></script>
+<script type="text/javascript" src="scripts/json2.js"></script>
+
+</head>
+
+<body>
+  <h1>Joystick robot controller based on ROSLIBJS</h1>
+  <p>Use your joystick to move the robot</p>
+  <input id="robotnameText" type="text" placeholder="Robotname">
+  <br/>
+  <br/>
+  <button id="startDrivingButton" onclick='setupRoslib()'>Start Driving</button>
+  <br/>
+  <br/>
+  <div style="float: right;">Logging Status: <span id="status" style="background-color: red; color: white; padding: 10px;">Stopped</span></div>
+  <button id="stopDrivingButton" onclick="stopDriving()" disabled>Stop Driving</button>
+  <button id="startLoggingButton" onclick="startLogging()" disabled>Start Logging</button>
+  <br/>
+  <br/>
+  <br/>
+  <output id="output">
+  </output>
+</body>
+</html>
